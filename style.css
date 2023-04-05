@@ -1,0 +1,152 @@
+body{
+
+    background-color: var(--primary);
+}
+
+/* Impostazioni per i font */
+
+*{
+
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+h1, h2, h3{
+
+    font-family: 'Lobster Two', cursive;
+}
+
+/* Colori Custom del sito */
+
+:root{
+
+    --primary : rgb(34, 154, 161);
+    --secondary: rgb(240, 149, 88);
+    --accent: rgb(105, 247, 255);
+    --whiteCustom: rgb(254, 254, 254);
+    --blackCustom: rgb(56, 56, 56);
+
+}
+
+
+/* Classi Custom Testi */
+
+.text-primaryC{
+
+    color: var(--primary);
+
+}
+
+.text-secondaryC{
+
+    color: var(--secondary);
+
+}
+
+.text-accentC{
+
+    color: var(--accent);
+
+}
+
+.text-whiteC{
+
+    color: var(--whiteCustom);
+
+}
+
+.text-blacC{
+
+    color: var(--blackCustom);
+
+}
+
+/* Classi Custom Background */
+
+.background-primaryC{
+
+    background-color: var(--primary);
+
+}
+
+.background-secondaryC{
+
+    background-color: var(--secondary);
+
+}
+
+.background-accentC{
+
+    background-color: var(--accent);
+
+}
+
+.background-whiteC{
+
+    background-color: var(--whiteCustom);
+
+}
+
+.background-blacC{
+
+    background-color: var(--blackCustom);
+
+}
+
+/* header */
+
+.headerCustom{
+
+    background: linear-gradient(200deg, rgba(34, 154, 161, 0.1), rgba(240, 149, 88, 0.4)), url(./media/sfondoHeader.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+/* Navbar */
+
+.btnCustom{
+
+    background-color: var(--secondary);
+    color: var(--whiteCustom);
+    transition: 0.5s all;
+
+}
+
+.btnCustom:hover{
+
+    background-color: var(--accent);
+
+    color: var(--blackCustom);
+
+}
+
+
+.logoA{
+
+    width: 60px;
+
+}
+
+#navIcon{
+
+    transition: 0.5s;
+
+}
+
+#mainNavbar{
+
+    transition: 0.3s;
+    height: 60px;
+
+}
+
+
+/* Sezione AOS */
+
+.increment-numbers{
+
+    font-size: 75px;
+    color: var(--accent);
+    font-weight: 200;
+}

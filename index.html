@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Saponi Quotidiani</title>
+    <link rel="shortcut icon" href="./media/favicon1.png" type="image/x-icon">
+
+    <!-- CDN di AOS -->
+
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- CDN dei font di Google  -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300&family=Roboto+Condensed:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
+    
+    <!-- CDN di Fontawesom -->
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    <!-- CSS di Bootstrap -->
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <!-- CSS Custom -->
+
+        <link rel="stylesheet" href="./style.css">
+
+
+  </head>
+  <body>
+
+    <!-- Sezione Navbar -->
+
+    <nav id="mainNavbar" class="navbar navbar-expand-lg bg-trasparent fixed-top">
+        <div class="container-fluid">
+
+          <a class="navbar-brand" href="#" id="logo1">
+
+            <img class="logoA" src="./media/logo1.png" alt="logo">
+
+          </a>
+
+          <a class="navbar-brand d-none" href="#" id="logo2">
+
+            <img class="logoA" src="./media/logo2.png" alt="logo">
+            
+          </a>
+
+          <button class="navbar-toggler background-accentC" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+            <i class="fa-solid fa-soap fa-flip-horizontal fa-2x text-secondaryC" id="navIcon"></i>
+
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Novità</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorie Prodotti
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Cerca Saponi" aria-label="Search">
+              <button class="btn btnCustom" type="submit">Cerca</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+    <!-- Fine sezione Navbar -->
+
+    <!-- Sezione Header -->
+
+    <header class="container-fluid">
+        <div class="row vh-100 headerCustom align-items-center">
+            <div class="col-12 text-center">
+                <h1 class="dispaly-2 fw-bold text-primaryC" data-aos="fade-up">Saponi</h1><h1 data-aos="fade-down" class="text-secondaryC">Quotidiani</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Fine Sezione Header -->
+
+    <!-- Sezione con scrollimento -->
+
+    <section class="container">
+        <div class="row my-5">
+
+            <div class="col-12 col-md-6">
+
+                <img class="img-fluid" data-aos="zoom-in" data-aos-duration="1500" src="./media/saponetta.png" alt="saponetta">
+
+            </div>
+
+            <div class="col-12 col-md-6">
+
+                <h2 id="h2test" class="text-center text-secondaryC">I nostri traguardi</h2>
+
+                    <p class="lead"><span id="first-span" class="increment-numbers d-block">0</span>Saponette create in un anno</p>
+                    <p class="lead"><span id="second-span" class="increment-numbers d-block">0</span>Clienti soddisfatti in Italia</p>
+                    <p class="lead"><span id="third-span" class="increment-numbers d-block">0</span>kg di materiale consegnato</p>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Fine sezione con scrollimento -->
+
+
+    
+
+
+
+    <!-- JS Di Bootstrap -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <!-- JS di AOS -->
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <script>
+            AOS.init();
+          </script>
+    
+    <!-- JS Interno -->
+
+        <script>
+
+
+        </script>
+
+    <!-- JS Custom -->
+
+        <script defer src="./main.js"></script>
+
+  </body>
+</html>
