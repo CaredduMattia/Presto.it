@@ -149,4 +149,28 @@ h1, h2, h3{
     font-size: 75px;
     color: var(--accent);
     font-weight: 200;
+
+}
+
+/* Stile Swiper */
+
+.swiper{
+
+    width: 700px;
+    height: 400px;
+
+}
+
+.card-custom{
+
+    height: 300px;
+    width: 500px;
+    border: 2px solid var(--secondary);
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 }

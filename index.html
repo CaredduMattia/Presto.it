@@ -6,6 +6,10 @@
     <title>Saponi Quotidiani</title>
     <link rel="shortcut icon" href="./media/favicon1.png" type="image/x-icon">
 
+    <!-- CDN di Swiper -->
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
     <!-- CDN di AOS -->
 
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -90,7 +94,7 @@
     <header class="container-fluid">
         <div class="row vh-100 headerCustom align-items-center">
             <div class="col-12 text-center">
-                <h1 class="dispaly-2 fw-bold text-primaryC" data-aos="fade-up">Saponi</h1><h1 data-aos="fade-down" class="text-secondaryC">Quotidiani</h1>
+                <h1 class="dispaly-2 fw-bold text-primaryC" data-aos="fade-down">Saponi</h1><h1 data-aos="fade-up" class="text-secondaryC">Quotidiani</h1>
             </div>
         </div>
     </header>
@@ -110,7 +114,7 @@
 
             <div class="col-12 col-md-6">
 
-                <h2 id="h2test" class="text-center text-secondaryC">I nostri traguardi</h2>
+                <h2 id="h2test" class="text-center d-flex text-secondaryC">I nostri traguardi</h2>
 
                     <p class="lead"><span id="first-span" class="increment-numbers d-block">0</span>Saponette create in un anno</p>
                     <p class="lead"><span id="second-span" class="increment-numbers d-block">0</span>Clienti soddisfatti in Italia</p>
@@ -124,10 +128,50 @@
 
     <!-- Fine sezione con scrollimento -->
 
+    <!-- Inizio Swiper -->
 
-    
+    <section class="container my-5 py-5">
+      <div class="row justify-content-center">
 
+            <div class="col-12 col-md-8">
 
+              <h2 class="text-center text-secondaryC">Dicono di noi</h2>
+
+              <!-- Slider main container -->
+            <div class="swiper">
+
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+
+              <!-- Slides -->
+              
+            </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+
+              <!-- If we need scrollbar -->
+              <!-- <div class="swiper-scrollbar"></div> -->
+           </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Fine Swiper -->
+
+    <!-- Inizio MouseEnter -->
+
+    <section class="container-fluid">
+
+    </section>
+
+    <!-- FIne MouseEnter -->
 
     <!-- JS Di Bootstrap -->
 
@@ -140,11 +184,98 @@
         <script>
             AOS.init();
           </script>
+
+    <!-- JS di Swiper -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     
     <!-- JS Interno -->
 
         <script>
 
+
+          let reviews = [
+
+            {name: 'Tizio', quote : 'I prodotti sono di ottima qualità, la spedizione è il vero punto debole', giudizio: '<i class="fa-solid fa-truck-ramp-box"></i>'},
+            {name: 'Caio', quote : 'Terribile, non comprerò mai più da loro', giudizio: '<i class="fa-solid fa-square-xmark"></i>'},
+            {name: 'Sempronio', quote : 'Tutto perfetto, prezzi ottimi', giudizio: '<i class="fa-regular fa-face-smile"></i>'},
+            {name: 'Caino', quote : 'I saponi sono arrivati tutti distrutti, almeno ho ricevuto un rimborso', giudizio: '<i class="fa-solid fa-face-angry"></i>'},
+            {name: 'Abele', quote : 'La qualità è buona, i prezzi sono troppo cari', giudizio: '<i class="fa-solid fa-coins"></i>'},
+
+          ];
+
+          let swiperWrapper = document.querySelector('.swiper-wrapper');
+
+          reviews.forEach( (recensione)=>{
+
+            let div = document.createElement('div');
+
+            div.classList.add('swiper-slide', 'd-flex', 'align-items-center', 'justify-content-center');
+
+            div.innerHTML = `
+
+              <div class="card-custom">
+                <h3 class="text-accentC">${recensione.name}</h3>
+                <p class="text-center p-2">${recensione.quote}</p>
+                <p class="text-center text-accentC p-2 fa-2x">${recensione.giudizio}</p>
+
+              </div>
+
+            `;
+
+            swiperWrapper.appendChild(div);
+
+          })
+
+            const swiper = new Swiper('.swiper', {
+              // Optional parameters
+              // direction: 'vertical',
+              loop: true,
+
+              // If we need pagination
+              pagination: {
+                el: '.swiper-pagination',
+              },
+
+              // Navigation arrows
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+
+              // Effetto Swiper
+
+                effect: "flip",
+                grabCursor: true,
+                pagination: {
+                  el: ".swiper-pagination",
+                },
+                navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+                },
+
+                // Breakpoints 
+
+                breakpoints: {
+                   640: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                },
+              },
+
+              // Autoscorrimento
+
+                autoplay: {
+                  delay: 2000,
+                  disableOnInteraction: false,
+                },
+
+              // And if we need scrollbar
+              // scrollbar: {
+              //   el: '.swiper-scrollbar',
+              // },
+            });
 
         </script>
 
