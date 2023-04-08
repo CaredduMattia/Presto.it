@@ -128,3 +128,52 @@ let osservatore = new IntersectionObserver(
     }
 )
 
+// Mouse Enter
+
+let icona1 = document.querySelector('.fa-pump-soap');
+let icona2 = document.querySelector('.fa-jug-detergent');
+let icona3 = document.querySelector('.fa-hand-sparkles');
+let icona4 = document.querySelector('.fa-pump-medical');
+
+let columns = document.querySelectorAll('.col-custom');
+
+columns.forEach( (colonna)=>{
+
+    colonna.addEventListener('mouseenter', ()=>{
+
+        icona1.classList.remove('text-secondaryC');
+        icona1.classList.add('text-whiteC');
+
+        icona2.classList.remove('text-secondaryC');
+        icona2.classList.add('text-whiteC');
+
+        icona3.classList.remove('text-secondaryC');
+        icona3.classList.add('text-whiteC');
+        
+
+        icona4.classList.remove('text-secondaryC');
+        icona4.classList.add('text-whiteC');
+         
+    })
+
+    colonna.addEventListener('mouseleave', ()=>{
+
+        
+        icona1.classList.remove('text-whiteC');
+        icona1.classList.add('text-secondaryC');
+
+        icona2.classList.remove('text-whiteC');
+        icona2.classList.add('text-secondaryC');
+
+        icona3.classList.remove('text-whiteC');
+        icona3.classList.add('text-secondaryC');
+        
+
+        icona4.classList.remove('text-whiteC');
+        icona4.classList.add('text-secondaryC');
+
+
+    })
+
+});
+
