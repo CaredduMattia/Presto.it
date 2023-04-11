@@ -227,3 +227,28 @@ h1, h2, h3{
     color: var(--accent);
     
 }
+
+/* Pagina Prodotti */
+
+.announcement-card{
+
+    min-height: 300px;
+    border: 2px solid var(--secondary);
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+/* Filtro Numero */
+
+.inputNumber{
+
+    color: var(--secondary);
+    font-size: 20px;
+    font-weight: 700;
+
+}

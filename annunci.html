@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Saponi Quotidiani</title>
+    <link rel="shortcut icon" href="./media/favicon1.png" type="image/x-icon">
+
+    <!-- CDN di Swiper -->
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <!-- CDN di AOS -->
+
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- CDN dei font di Google  -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300&family=Roboto+Condensed:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
+    
+    <!-- CDN di Fontawesom -->
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    <!-- CSS di Bootstrap -->
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <!-- CSS Custom -->
+
+        <link rel="stylesheet" href="./style.css">
+
+
+  </head>
+  <body>
+
+    <!-- Sezione Navbar -->
+
+    <nav id="mainNavbar" class="navbar navbar-expand-lg bg-trasparent fixed-top">
+        <div class="container-fluid">
+
+          <a class="navbar-brand" href="#" id="logo1">
+
+            <img class="logoA" src="./media/logo1.png" alt="logo">
+
+          </a>
+
+          <a class="navbar-brand d-none" href="#" id="logo2">
+
+            <img class="logoA" src="./media/logo2.png" alt="logo">
+            
+          </a>
+
+          <button class="navbar-toggler background-accentC" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+            <i class="fa-solid fa-soap fa-flip-horizontal fa-2x text-secondaryC" id="navIcon"></i>
+
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Novità</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorie Prodotti
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Cerca Saponi" aria-label="Search">
+              <button class="btn btnCustom" type="submit">Cerca</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+    <!-- Fine sezione Navbar -->
+
+    <!-- Sezione Header -->
+
+    <header class="container-fluid">
+        <div class="row vh-100 headerCustom align-items-center">
+            <div class="col-12 text-center">
+                <h1 class="dispaly-2 fw-bold text-primaryC" data-aos="fade-down">Novità</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Fine Sezione Header -->
+
+    <!-- Inizio sezione prodotti -->
+
+    <section class="container-fluid my-5">
+        <div class="row">
+
+            <h2>Filtra i prodotti per: </h2>
+
+            <div class="col-12 col-md-3">
+
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              Categorie
+                            </button>
+                          </h2>
+                          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+
+                            <!-- Filtro Categoria -->
+
+                            <div id="categoryWrapper" class="accordion-body">
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="All" checked>
+                                    <label class="form-check-label" for="All">
+                                      Tutte le tipologie di prodotti
+                                    </label>
+                                  </div>
+                                
+                            </div>
+
+                          </div>
+                        </div>
+
+                    <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                              Prezzi
+                            </button>
+                          </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+
+                            <div class="accordion-body">
+
+                                 <div>
+
+                                    <span class="inputNumber">
+
+                                        0€
+    
+                                    </span>
+    
+
+                                <input id="inputPrice" type="range" class="w-100">
+
+
+                                <span id="incrementNumber" class="inputNumber">
+
+                                    0
+
+                                </span>
+
+                                <span class="inputNumber"> €</span>
+
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed fs-3" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                              Ricerca 
+                            </button>
+                          </h2>
+                          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+
+                            <div class="accordion-body"> 
+
+                                <input type="text" placeholder="Cerca il prodotto" id="wordInput">
+
+
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                </div>
+
+                <div class="col-12 col-md-9">
+
+                    <div id="cardsWrapper" class="row">
+
+                    
+                    </div>
+
+                </div>
+        </div>  
+    </section>
+
+    <!-- Fine sezione prodotti -->
+
+    <!-- Inizio Footer -->
+
+    <footer class="container-fluid mt-5 py-5 background-secondaryC text-blackC">
+
+      <div class="container">
+
+        <div class="row min-h">
+
+          <div class="col-12 col-md-4 text-center my-3">
+
+            <h2 class="text-accentC">Informazioni di Contatto</h2>
+            <p>P.IVA: 040393598843</p>
+            <p>Sede Legale: Torino - Via Roma 24</p>
+            <p>Tel: +39 9343843800</p>
+            <p>e-mail: mail@prova.it</p>
+
+          <div class="d-flex justify-content-around">
+
+            <i class="fa-brands fa-instagram fa-2x"></i>
+
+            <i class="fa-brands fa-youtube fa-2x"></i>
+
+            <i class="fa-brands fa-flickr fa-2x"></i>
+
+          </div>
+
+          </div>
+
+          <div class="col-12 col-md-4 text-center my-3">
+
+            <h2 class="text-accentC">Navigazione Rapida</h2>
+            
+            <a href="#animate" class="footer-link"><p>I Nostri Traguardi</p></a>
+            <a href="#aboutUs" class="footer-link"><p>Recensioni</p></a>
+            <a href="#mouseEnter" class="footer-link"><p>Tipologie Prodotti</p></a>
+            
+            
+
+          </div>
+
+          <div class="col-12 col-md-4 text-center my-3">
+
+            <h2 class="text-accentC">Lavoriamo con...</h2>
+            <p>GLS</p>
+            <p>Burger King</p>
+            <p>Poltronesofà</p>
+            <p>Acqua & Sapone</p>
+
+          </div>
+
+          </div>
+
+
+        </div>
+      </div>
+
+
+
+
+    </footer>
+
+    <!-- Fine Footer -->
+
+    <!-- JS Di Bootstrap -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <!-- JS di AOS -->
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <script>
+            AOS.init();
+          </script>
+
+    <!-- JS di Swiper -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    
+    <!-- JS Interno -->
+
+        <script>
+
+
+        </script>
+
+    <!-- JS Custom -->
+
+        <script defer src="./annunci.js"></script>
+
+  </body>
+</html>
