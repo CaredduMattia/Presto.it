@@ -262,3 +262,80 @@ h1, h2, h3{
     font-weight: 700;
 
 }
+
+/* Card Immagini */
+
+.img-card-custom{
+
+    height: 150px;
+    border-radius: 50%;
+}
+
+/* Pagina I nostri Dipendenti */
+
+.circle{
+
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    border: 2px solid var(--secondary);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+}
+
+.opener{
+
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    z-index: 1;
+    background-color: var(--secondary);
+    cursor: pointer;
+
+}
+
+.moved{
+
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+
+    position: absolute;
+    transition: 1s;
+
+    background-size: cover;
+    background-position: 0px;
+
+    cursor: pointer;
+
+}
+
+.dipendenti-card{
+
+    height: 350px;
+    width: 250px;
+
+    border-radius: 20px;
+    border: 2px solid var(--secondary);
+    background-size: 175px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}

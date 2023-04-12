@@ -65,6 +65,8 @@ window.addEventListener('scroll', ()=>{
 
 })
 
+// Fetch Annunci e Filtri 
+
 fetch('./annunci.json').then( (response)=> response.json() ).then( (data)=> {
 
 
@@ -119,7 +121,7 @@ fetch('./annunci.json').then( (response)=> response.json() ).then( (data)=> {
 
         array.sort( (a, b)=> Number(b.price - a.price));
 
-        array.forEach( (element)=> {
+        array.forEach( (element, i)=> {
 
             let div = document.createElement('div');
 
@@ -128,6 +130,8 @@ fetch('./annunci.json').then( (response)=> response.json() ).then( (data)=> {
             div.innerHTML = `
 
                             <div class="announcement-card">
+
+                            <img class="img-card-custom" src="https://picsum.photos/${200 + i}" alt="">
 
                                     <p class="h3">${element.name}</p>
                                     <h3>${element.category}</h3>
@@ -149,17 +153,23 @@ fetch('./annunci.json').then( (response)=> response.json() ).then( (data)=> {
 
     //Filtro Categoria
 
-    function filterbyCategory(categoria){
+    function filterbyCategory(array){
+
+        let arrayFromNodelist = Array.from(checkInputs);
+
+        let button = arrayFromNodelist.find( (bottone)=> bottone.checked);
+
+        let categoria = button.id;
 
         if(categoria != 'All') {
 
-        let filtered = data.filter( (annuncio)=> annuncio.category == categoria );
+            let filtered = array.filter( (annuncio)=> annuncio.category == categoria );
 
-        showCards(filtered);
+            return filtered;
 
         } else {
 
-            showCards(data);
+            return data;
 
         }
 
@@ -174,7 +184,7 @@ fetch('./annunci.json').then( (response)=> response.json() ).then( (data)=> {
 
         checkInput.addEventListener('click', ()=>{
 
-            filterbyCategory(checkInput.id);
+            globalFilter();
 
         })
 
@@ -195,7 +205,7 @@ fetch('./annunci.json').then( (response)=> response.json() ).then( (data)=> {
 
         inputPrice.max = Math.ceil(maxPrice);
 
-        inputPrice.valure = Math.ceil(maxPrice);
+        inputPrice.value = Math.ceil(maxPrice);
 
         incrementNumber.innerHTML = Math.ceil(maxPrice);
 
@@ -207,19 +217,19 @@ fetch('./annunci.json').then( (response)=> response.json() ).then( (data)=> {
 
     // Funzione Filtro Prezzo
 
-    function filterbyPrice(prezzo){
+    function filterbyPrice(array){
 
-        let filtered = data.filter( (annuncio)=> annuncio.price <= prezzo );
+        let filtered = array.filter( (annuncio)=> annuncio.price <= +(inputPrice.value) );
 
-        showCards(filtered);
+        return filtered;
 
     }
 
     inputPrice.addEventListener('input', ()=>{
 
-        filterbyPrice(inputPrice.value);
-
         incrementNumber.innerHTML = inputPrice.value;
+        
+        globalFilter();
 
     })
 
@@ -227,19 +237,35 @@ fetch('./annunci.json').then( (response)=> response.json() ).then( (data)=> {
 
     let wordInput = document.querySelector('#wordInput');
 
-    function filterbyWord(nome){
+    function filterbyWord(array){
 
-        let filtered = data.filter ( (annuncio)=> annuncio.name.toLowerCase().includes(nome.toLowerCase()));
+        let nome = wordInput.value;
 
-        showCards(filtered);
+        let filtered = array.filter ( (annuncio)=> annuncio.name.toLowerCase().includes(nome.toLowerCase()));
+
+        return filtered;
 
     }
 
     wordInput.addEventListener('input', ()=> {
 
-        filterbyWord(wordInput.value);
+        globalFilter();
 
 
     })
 
+    function globalFilter(){
+
+        let filteredByCategory = filterbyCategory(data); 
+        
+        let filteredByPrice = filterbyPrice(filteredByCategory);
+
+        let filteredByWord = filterbyWord(filteredByPrice);
+
+        showCards(filteredByWord);
+
+    }
+    
 })
+
+
